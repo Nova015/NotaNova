@@ -1,5 +1,6 @@
 import discord
 import os
+import pytz
 from dotenv import load_dotenv
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from datetime import datetime
@@ -7,26 +8,24 @@ from discord.ext import commands
 import asyncio
 
 load_dotenv()
-TOKEN = os.getenv("DISCORD_TOKEN")
-ID_ASISTENCIA = os.getenv("ID_CANAL_ASISTENCIA ")
-ID_UPDATE = os.getenv("ID_CANAL_UPDATE")
+TOKEN = os.getenv("TOKEN")
+ID_ASISTENCIA =1098776649060864051
+ID_UPDATE =1369089329753882717
 
 intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True  
 
-#client = discord.Client(intents=intents)
 bot = commands.Bot(command_prefix='!', intents=intents)
+scheduler = AsyncIOScheduler(timezone=pytz.timezone('America/Mexico_City'))
 
-scheduler = AsyncIOScheduler()
-
-#@client.event
 @bot.event
 async def on_ready():
     print(f'Bot conectado como {bot.user}')
 
     if not scheduler.running:
-        scheduler.add_job(enviar_recordatorios, 'cron', day_of_week='tue', hour=15, minute=20)
+        scheduler.add_job(enviar_recordatorios, 'cron', day_of_week='wed', hour=17, minute=35)
+        scheduler.add_job(avance_urgente, 'cron', day_of_week='wed', hour=18, minute=0)
         scheduler.start()
 
 
@@ -47,6 +46,11 @@ async def enviar_recordatorios():
         await canal_asistencia.send(mensaje_avance)
     if canal_update:
         await canal_update.send(mensaje_junta)
+
+async def avance_urgente():
+    canal_asistencia = bot.get_channel(ID_ASISTENCIA)
+    mensaje_urgente = cargar_mensaje("mensaje_avanceUrgente.txt")
+    await canal_asistencia.send(mensaje_urgente)
 
 @bot.command()
 async def testbot(ctx):
