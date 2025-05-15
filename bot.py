@@ -24,7 +24,7 @@ async def on_ready():
     print(f'Bot conectado como {bot.user}')
 
     if not scheduler.running:
-        scheduler.add_job(enviar_recordatorios, 'cron', day_of_week='thu', hour=7, minute=0)
+        scheduler.add_job(enviar_recordatorios, 'cron', day_of_week='thu', hour=12, minute=0)
         scheduler.add_job(avance_urgente, 'cron', day_of_week='thu', hour=16, minute=0)
         scheduler.start()
 
