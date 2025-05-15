@@ -9,8 +9,8 @@ import asyncio
 
 load_dotenv()
 TOKEN = os.getenv("TOKEN")
-ID_ASISTENCIA=1369089385810759701
-ID_UPDATE=1369089329753882717
+ID_ASISTENCIA=1098776649060864051
+ID_UPDATE=1073289305662967940
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -24,7 +24,7 @@ async def on_ready():
     print(f'Bot conectado como {bot.user}')
 
     if not scheduler.running:
-        scheduler.add_job(enviar_recordatorios, 'cron', day_of_week='wed', hour=18, minute=35)
+        scheduler.add_job(enviar_recordatorios, 'cron', day_of_week='thu', hour=7, minute=0)
         scheduler.add_job(avance_urgente, 'cron', day_of_week='thu', hour=16, minute=0)
         scheduler.start()
 
