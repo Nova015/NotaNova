@@ -1,6 +1,6 @@
 import discord
 import os
-#import pytz
+import pytz
 from dotenv import load_dotenv
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from datetime import datetime
