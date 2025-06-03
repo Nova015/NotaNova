@@ -1,0 +1,7 @@
+Hola {usuario}!
+Bienvenido al servidor UNEX Future
+Aqui tienes algunos datos importante:
+-Canal de aistencia: <#{id_asistencia}>
+...
+Si tienes algunas dudas, no dudes en dirigirte al personal administraivo
+
