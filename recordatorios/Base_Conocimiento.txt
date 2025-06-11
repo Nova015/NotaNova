@@ -1,0 +1,34 @@
+=== Contacto con el personal administrativo ===
+Puedes dirigirte con Viviane, encargada del área administrativa, a través del correo: isvivi.anne@gmail.com.
+
+=== Juntas semanales ===
+Las juntas generales se realizan vía Google Meet cada jueves a las 8:00 PM (hora CDMX).
+
+=== Entrega de avances semanales ===
+Los avances semanales se deben entregar los días jueves antes de las 5:00 PM (hora CDMX). 
+Debes subirlos a tu carpeta personal en Google Drive, dentro de la subcarpeta de "Avances Semanales", correspondiente al mes actual.
+
+=== Estructura del Drive personal ===
+Cada colaborador cuenta con una carpeta con su nombre. Dentro de esta carpeta deben existir:
+1. Carpeta "Info Estudiante"
+2. Carpeta "Bitácoras"
+3. Carpeta "Proyectos"
+
+Para más información, consulta el documento proporcionado por el administrador.
+
+=== Trámites internos ===
+Puedes solicitar cualquier trámite a través del canal de Discord llamado `#tramites`.
+
+=== Encargado o administrador general ===
+El encargado general de la empresa es el Ing. Gabriel.
+
+=== Registro de asistencia ===
+Debes registrar tu asistencia en el canal de Discord llamado `#asistencia`, con el siguiente formato:
+
+Fecha: (por ejemplo: 09/06/2025)  
+Inicio o Fin de actividades: (ej. Inicio)  
+Área: (ej. Desarrollo Web)  
+Actividad: (descripción breve)  
+Stopper: (problemas encontrados, si los hay)  
+URL de la bitácora: (enlace a tu documento)
+

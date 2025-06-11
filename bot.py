@@ -13,13 +13,14 @@ TOKEN = os.getenv("TOKEN")
 ID_ASISTENCIA=1098776649060864051
 ID_UPDATE=1073289305662967940
 
+
 intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True  
 
 bot = commands.Bot(command_prefix='!', intents=intents)
 #scheduler = AsyncIOScheduler()
-#Activar en servidor
+# Activar en servidor
 scheduler = AsyncIOScheduler(timezone=pytz.timezone('America/Mexico_City'))
 
 #Funcion de programacion de tareas (envio de recordatorios)
@@ -81,6 +82,7 @@ async def avance_urgente():
 
 #comando !testdm para realizacion de pruebas (envio de DM a usuarios)
 #NOTA: si ya no es necesario realizar pruebas, la funcion se puede eliminar
+
 @bot.command()
 async def testdm(ctx):
     try:
